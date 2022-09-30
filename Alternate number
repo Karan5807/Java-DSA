@@ -1,0 +1,27 @@
+#In this Program Print Alternate Number of the Array.
+import java.util.Scanner;
+public class Alternative {
+    public static void print(int size, int array[]){
+        System.out.println(" Printing Alternative Element of Array");
+        for(int i=0; i<size; i+=2){
+            System.out.println(array[i]);
+        }
+    }
+    public static void main(String[] args) {
+        System.out.println("Program No 7 of 100 Days");
+        System.out.println(" Print the alternate Number of the Given array");
+        System.out.println(" Enter the Size of the Array ");
+        Scanner input = new Scanner(System.in);
+        int size = input.nextInt();
+        if(size==1){
+            System.out.println("Enter Valid Input size of array");
+        }
+        System.out.println("Enter the Element of Array");
+        int array[]= new int[size];
+        for(int i=0; i<size; i++){
+          array[i]=input.nextInt();
+        }
+        print(size, array);
+        input.close();  
+    }
+}
