@@ -1,2 +1,59 @@
-# my-first-repo
-Practice account for Learning Git
+# Java-Programs
+// Java Programs to Reverse Number or String //
+import java.util.Scanner;
+public class ReverseString  {
+    public static void revDigit(){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the Number to Reverse");
+        long digit = input.nextLong();
+        long rev=0;
+        long reminder;
+        while (digit!=0) {
+            reminder=digit%10;
+            rev=rev*10+reminder;
+            digit=digit/10; 
+        }   
+        System.out.println("The Reverse of Number is "+rev);
+        input.close();
+    }
+    public static void revString(){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the Word to be Reverse ");
+        String word=input.nextLine();
+        int len=word.length();
+        String rev="";
+        for(int i=len-1; i>=0; i--){
+            rev=rev+word.charAt(i);
+        }
+        System.out.println("Printing Reverse of the string: "+rev);
+        input.close();
+    }
+    public static void main(String[] args) {
+        System.out.println("Program Number 9 of 100 Days");
+        System.out.println("Print The Reverse of Element");
+        Scanner input=new Scanner(System.in);
+        System.out.println("Enter the Choice");
+        System.out.println("Press 1 for the Word Reverse");
+        System.out.println("Press 2 for the Number Reverse");
+        int choice= input.nextInt();
+        switch (choice) {
+            case 1:
+            {
+             revString();
+            }
+            break;
+            case 2:
+            {
+            revDigit();
+            }
+            break;
+            default:
+            {
+                System.out.println("Invalid choice");
+            }
+            break;
+        }
+        input.close();
+    }
+}
+
