@@ -1,0 +1,37 @@
+#Try&Catch
+import java.util.Scanner;
+
+public class MinimumMarks {
+    public static void main(String[] args) {
+        try {
+            System.out.println("Using Try and Catch Block");
+            System.out.println("Program No 10 of 100 Days");
+        System.out.println("Write a program to compute and print the numbers of students who have obtained marks");
+        System.out.println("Enter the Marks Of Students");
+        Scanner input = new Scanner(System.in);
+        int marks=input.nextInt();
+        if(marks<=100 && marks>80){
+            System.out.println("Marks in Range of 81 to 100");
+        }
+        else{
+            if(marks<=80 && marks>60){
+                System.out.println("Marks in Range of 61 to 80");
+            }
+            else{
+                if(marks<=60 && marks>40){
+                    System.out.println("Marks in Range of 41 to 60");
+                }
+                else{
+                    System.out.println("Marks in Range of 0 to 40");
+                }
+            }
+        }
+        input.close();
+
+        } 
+        catch (Exception e) {
+            // TODO: handle exception
+            System.out.println("Invalid Input");
+        }
+    }
+}
