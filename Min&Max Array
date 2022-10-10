@@ -1,0 +1,33 @@
+#MinandMax of The Array
+import java.util.Scanner;
+public class MinandMax {
+    public static void main(String[] args) {
+        System.out.println("How do you find the largest and smallest number in an unsorted Number array ?");
+        System.out.println("Program No 12 of 100 Days Programming");
+        Scanner input=new Scanner(System.in);
+        System.out.println("Enter the Size of Array");
+        int size=input.nextInt();
+        int array[]=new int[size];
+        System.out.println("Enter the Value of the Array");
+        for(int i=0; i<size; i++){
+            array[i]=input.nextInt();
+        }
+        int min=array[0];
+        int max=array[0];
+        for(int j=0; j<size; j++){
+            if(array[j]>max){
+                max=array[j];
+            }
+            else if (array[j]<min) {
+                min=array[j];
+                break;
+            } 
+            else {
+                System.out.println("Here is Your Answer: ");
+            }
+        }
+        System.out.println("The Maximum of the Array is: "+max);
+        System.out.println("The Minimum of the Array is: "+min);
+
+    }
+}
