@@ -1,0 +1,38 @@
+#FindTriangle
+/// Find the Triangle where it is Acute and Obtuse and Right Angle Triangle.
+import java.util.Scanner;
+
+public class FindTriangle {
+    public static void main(String[] args) {
+        System.out.println("Program No 14 of 100 Days");
+        System.out.println("Given the 3 sides of a triangle, find out whether it is acute-angled, right-angled, or obtuse-angled.");
+        Scanner input=new Scanner(System.in);
+        System.out.println("Enter the First Side of Triangle");
+        long firstSide=input.nextLong();
+        System.out.println("Enter the Second Side of Triangle");
+        long SecondSide=input.nextLong();
+        System.out.println("Enter the Third Side of Triangle");
+        long thirdSide=input.nextLong();
+        long Largest=0;// Store Largest side.
+        if(firstSide>SecondSide && firstSide>thirdSide){
+            Largest=firstSide;
+        }
+        else if (SecondSide>thirdSide && SecondSide>thirdSide) {
+            Largest=SecondSide;
+        }
+        else{
+            Largest=thirdSide;
+        }
+        //////////// Here we Use Formula 2*(Largest^2)=(A^2+B^2+C^2);/////
+        if(2*(Largest*Largest)<((firstSide*firstSide)+(SecondSide*SecondSide)+(thirdSide))){
+            System.out.println("Acute Angle Triangle");
+        }
+        else if(2*(Largest*Largest)>((firstSide*firstSide)+(SecondSide*SecondSide)+(thirdSide))){
+            System.out.println("Obtuse Angle Triangle");
+        }
+        else{
+            System.out.println("Right Angle Triangle");
+        }
+
+}
+}
