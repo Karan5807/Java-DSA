@@ -1,0 +1,31 @@
+#Pailndrome_Number
+// Check Number is Palindrome Number or Not
+import java.util.Scanner;
+public class Pailndrome {
+    public static void main(String[] args) {
+    System.out.println("Program No 15 of 100 Days");
+    System.out.println("Check Number is Palindrome Number or Not");
+    Scanner input=new Scanner(System.in);
+    System.out.println("Enter the Number to Check");
+    int N=input.nextInt();
+    //////// Finding Reverse of Given Number ////////
+    int rem=0;
+    int Rev=0;
+    int X=N;
+    while(N!=0){
+    rem=N%10;
+    Rev=Rev*10+rem;
+    N=N/10;  
+    }
+    /////// Printing Reverse Number /////
+    System.out.println("Reverse of the Inputed Number: "+Rev);
+    /// Check Given Number and Reverse Number is Equall or Not /////
+    if(Rev==X){
+      System.out.println("True");
+    }
+    else{
+      System.out.println("False");
+    }
+    input.close();
+    }
+}
