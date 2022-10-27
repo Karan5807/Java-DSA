@@ -1,0 +1,28 @@
+#Recursion
+// Sum of N Natural number Using Recursion
+package Recursion;
+import java.util.Scanner;
+public class sumofN {
+    public static void sumofNum(int i, int N, int sum){
+        if(i==N){
+            sum=sum+i;
+            System.out.println(sum);
+          return;
+        }
+        else{
+            sum=sum+i;
+            sumofNum(i+1, N, sum);
+        } 
+    }
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        System.out.println("Program No 21 of 100 Days");
+        System.out.println("Using Recursion for Calculating sum of N Natural Number");
+        System.out.println("Enter N Natural number to Sum");
+        int N=input.nextInt();
+        int sum=0;
+        int i=0;
+        sumofNum(i, N, sum);
+        input.close();
+    }
+}
