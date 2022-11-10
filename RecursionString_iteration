@@ -1,0 +1,24 @@
+#Recursion_String_Iteration
+// WAP of Recursion of Iteration of String
+
+package Recursion;
+import java.util.Scanner;
+public class RevString {
+    public static void rev(String s, int idx){
+       if(s.length()==idx || s.length()==0){
+        return; // Base Case of Recursion 
+       } 
+       System.out.print(s.charAt(idx)+" ");
+       idx++;
+       rev(s,idx);
+    }
+    public static void main(String[] args) {
+        System.out.println("Program No 22 of 100 Days");
+        System.out.println("Iteration of a String Using Recursion");
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the String");
+        String s=input.nextLine();
+        int idx=0;
+        rev(s,idx); //Calling function
+    }
+}
