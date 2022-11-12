@@ -1,0 +1,28 @@
+#Stack_Height
+/// WAP to Find the Height of Stack X to the Power N
+package Recursion;
+import java.util.Scanner;
+public class XpowerN {
+    public static int calcHeight(int base, int xpo) {
+        if(base==0){
+            return 0;
+        }
+        if(xpo==0){
+            return 1;
+        }
+        int xPnM1= calcHeight(base, xpo-1);
+        int xPn=base*xPnM1;
+        return xPn;
+    }
+    public static void main(String[] args) {
+        System.out.println("Program no 23 of 100 Days Code");
+        System.out.println("Find the Height of Stack X to the Power N");
+        Scanner input =new Scanner(System.in);
+        System.out.println("Enter the Base of Stack");
+        int base=input.nextInt();
+        System.out.println("Enter the Xepo of Stack");
+        int xpo=input.nextInt();
+        int ans=calcHeight(base, xpo);
+        System.out.println(ans);
+    }
+}
