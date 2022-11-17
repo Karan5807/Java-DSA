@@ -1,0 +1,21 @@
+#WAP to print  Fibonnaci Series Upto N.
+
+import java.util.Scanner;
+public class Fibonacci {
+    public static void main(String[] args) {
+        Scanner input= new Scanner(System.in);
+        System.out.println("Enter the Number upto Print fibonaaci Series");
+        int N=input.nextInt();
+        int num1=0;
+        int num2=1;
+        int count=0;
+        while (count<N) {
+            System.out.print(num1+" ");
+            int tempNum=num1+num2;
+            num1=num2;
+            num2=tempNum;
+            count=count+1;
+        }
+        input.close();
+    }
+}
