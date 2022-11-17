@@ -1,0 +1,22 @@
+#Frist_Character
+// WAP Frist character of every Word in String
+
+package String;
+import java.util.Scanner;
+public class FirstChar {
+    public static void main(String[] args) {
+        System.out.println("Print the first Character of word in String");
+        System.out.println("Enter the String");
+        Scanner input = new Scanner(System.in);
+        String str=input.nextLine();
+        char a[]=str.toCharArray();
+        int len=a.length;
+        for(int i=0; i<len; i++){
+            if(a[i]!=' ' && (i==0 || a[i-1] ==' '))
+                {
+                    System.out.println(a[i]);
+                }
+        }
+        input.close();
+        }
+    }
