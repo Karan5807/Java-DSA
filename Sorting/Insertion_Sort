@@ -1,0 +1,33 @@
+#WAP to Insertion Sort Algorithm
+
+/*** Insertion Srting Algo ***/
+import java.util.*;
+public class InsertionSort {
+   public static void main(String[] args) {
+    System.out.println("Program No 17 of 100 Days");
+     Scanner input=new Scanner(System.in);
+     System.out.println("Insertion Sorting Algo");
+     System.out.println("Enter the Size of Array");
+     int N=input.nextInt(); ////// Taking Size of Array
+     int Arr[]=new int[N];
+     System.out.println("Enter the Array Value");
+     for(int i=0; i<N; i++){
+        Arr[i]=input.nextInt();  ///// Input for the Array
+     }
+      for(int i=1; i<N; i++){      ///// Start  i loop from 1 not from 0 ///
+         int current = Arr[i];     ///  Taking current Element into i ///
+         int j=i-1;                ///// According to that j Start from 1 previous place to check  /// 
+         while(j>=0 && current<Arr[j])   /// < Ascending Order and > Means Desecnding Order
+         {
+          Arr[j+1]=Arr[j];
+          j--;
+         }
+         Arr[j+1]=current;
+      }
+      System.out.println("Sorted Array is: ");
+      for(int i=0; i<N; i++){
+        System.out.print(Arr[i]+" ");
+      }
+      input.close();
+   }  
+}
