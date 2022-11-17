@@ -1,0 +1,24 @@
+#WAP to print table of N Using Recursion.
+
+package Recursion;
+import java.util.Scanner;
+public class TableRecursion {
+    public static void printTable(int N, int i){
+        if(i>10){
+            return;
+        }
+        else{
+            System.out.println(N +"*"+i+"="+N*i);
+            printTable(N, i+1);
+        }
+    }
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        System.out.println("Enter the Number to Print Table By Recursion");
+        int N=input.nextInt();
+        int i=1;
+        System.out.println("Printing Table of "+N);
+        printTable(N, i);
+        input.close();
+    }
+}
