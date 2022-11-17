@@ -1,0 +1,34 @@
+#WAP to find the Quadrant of the given point lies in.
+
+import java.util.Scanner;
+public class FindQuadrant {
+
+    public static void main(String[] args) {
+        System.out.println("A common problem in mathematics is to determine which quadrant a given point lies in.");
+        System.out.println("Your job is to take a point and determine the quadrant it is in. You can assume that neither of the two coordinates will be 0.");
+        System.out.println("1. The input consists of two values.");
+        System.out.println("2. The first value of input denotes the x coordinate.");
+        System.out.println("3. The second value of input denotes the y coordinate.");
+        Scanner input=new Scanner(System.in);
+        System.out.println("Enter the First value");
+        int val1=input.nextInt();
+        System.out.println("Enter the Second Value");
+        int val2=input.nextInt();
+        if(val1>0 && val2>0){
+            System.out.println("Point lies at First Quadrant");
+        }
+        else if(val1<0 && val2>0){
+            System.out.println("Point Lies in Second Quadrant");
+        }
+        else if(val1<0 && val2<0){
+            System.out.println("Point Lies in Third Quadrant");
+        }
+        else if(val1>0 && val2<0){
+            System.out.println("Point Lies in Fourth Quadrant");
+        }
+        else if(val1==0 && val2==0){
+            System.out.println("Invalid Number Input");
+        }
+        input.close();
+    }
+}
