@@ -1,0 +1,30 @@
+#WAP to Delet the Array.
+
+public class DeletArray {
+    public static void main(String[] args) {
+        System.out.println("Program no 20 of 100 days");
+        System.out.println("Delet Number from the Array");
+        int a[]={23,45,34,56,67,6,7,8,6,43,345};// Declartion and Initalizaion of Array //
+        for(int i=0; i<a.length; i++){
+            System.out.print(a[i]+" ");
+        }
+        System.out.println(" ");
+        int del=6; //The Number to be Deleted from Array
+        int count=0;
+        if(a.length>0){ ////Checking Length oof the Array
+            for(int i=0; i<a.length; i++){
+                if(del==a[i]){
+                    for(int j=i; j<a.length-1; j++){
+                        a[j]=a[j+1];
+                       // count++;
+                    }
+                    count++; ///// Here count is used for the count the element occurance in array
+                }
+            }
+        }
+        System.out.println("The Array after Deletion of element");
+        for(int k=0; k<a.length-count; k++){
+            System.out.print(a[k]+" ");
+        }
+    }
+}
