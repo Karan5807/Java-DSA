@@ -1,0 +1,27 @@
+#WAP to print Fibonancci Series with the help of Recursion.
+
+package Recursion;
+import java.util.Scanner;
+/*** fibbonacciSeries*/
+public class fibbonacciSeries {
+    public static void printFibb(int a, int b, int N){
+        if(N==0){
+            return;
+        }
+        int c=a+b;
+        System.out.println(c);
+        printFibb(b, c, N-1); // Changing Value of A to B and B to C  in calling function//
+    }
+    public static void main(String[] args) {
+        Scanner input= new Scanner(System.in);
+        System.out.println("Enter the Number upto Print fibonaaci Series");
+        int N=input.nextInt();
+        int a=0;
+        int b=1;
+        System.out.println("Printing Series");
+        System.out.println(a);
+        System.out.println(b);
+        printFibb(a, b, N-2);
+        input.close();
+    }
+}
