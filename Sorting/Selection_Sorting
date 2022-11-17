@@ -1,0 +1,31 @@
+#WAP to Sorting Algorithm of Selection Sorting
+
+import java.util.Scanner;
+class SelectSort {
+
+    public static void main(String[] args) {
+        System.out.println("Selection Sort");
+        Scanner input = new Scanner (System.in);
+        System.out.println("Enter The Size of Array");
+        int N =input.nextInt();
+        int array[]= new int[N];
+        for(int i=0; i<N; i++){
+            array[i]=input.nextInt();
+        }
+        for(int i=0; i<array.length-1; i++){
+            int small=i;
+            for(int j=i+1; j<array.length; j++){
+                  if(array[small] < array[j]){
+                    small=j;
+                  }
+            }
+            int temp =array[small];
+            array[small]=array[i];
+            array[i]=temp;
+        }
+             for(int i=0; i<array.length; i++){
+                System.out.print(array[i]+" ");
+             }
+             input.close();
+    }
+}
