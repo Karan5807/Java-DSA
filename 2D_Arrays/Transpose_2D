@@ -1,4 +1,4 @@
-WAP to User Input of 2D Array and Print it.
+WAP to User Input of 2D Array and Print and Transpose it.
 
 import java.util.Scanner;
 /*** 2DArray ***/
