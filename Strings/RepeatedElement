@@ -1,0 +1,22 @@
+#WAP to find the Repeated Character in a String with Occurance.
+
+package String;
+public class repeatedElement {
+    public static void main(String[] args) {
+        String S="GeekforGeeks";
+        for(int i=0; i<S.length()-1; i++){
+            int count =0;
+            System.out.print(S.charAt(i)+" ");
+            for(int j=0; j<S.length(); j++){       
+            if(S.charAt(i)==S.charAt(j)){
+               // System.out.print(i);
+                count++;
+                if(count==1){
+                    
+                }
+            }
+        }
+        System.out.println(count);
+    }
+}
+}
