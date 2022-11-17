@@ -1,0 +1,28 @@
+#WAP to Enter the Number for Factorial.
+package Recursion;
+import java.util.Scanner;
+public class RecursionFact {
+    public static void recurFact(int i, int N, int fact){
+     if(i==N){
+        fact=fact*i;
+        System.out.println(fact);
+        return;
+     }
+     else if(N==0){
+        System.out.println("1");
+     }
+     else{
+        fact=fact*i;
+        recurFact(i+1, N, fact);
+     }
+    }
+    public static void main(String[] args) {
+        Scanner input =new Scanner(System.in);
+        System.out.println("Enter the Number for Factorial");
+        int N=input.nextInt();
+        int i=1;
+        int fact=1;
+        recurFact(i,N,fact);
+        input.close();
+    }
+}
