@@ -1,0 +1,44 @@
+WAP to Print the decimal value of each fraction in a new line up to 6 decimal places.
+
+import java.util.Scanner;
+
+public class PlusMinus {
+    public static void main(String[] args) {
+        System.out.println("Given an array arr of N integers, Calculate the ratios of its elements that are positive, negative, and zero to the array size N.");
+        System.out.println("Print the decimal value of each fraction in a new line up to 6 decimal places.");
+        System.out.println("There are 3 positive integers, 3 negative integers, and 0 zeroes in the array.");
+        Scanner input=new Scanner(System.in);
+        System.out.println("Enter the Size of Array");
+        int N=input.nextInt();
+        int arr[]=new int[N];
+        System.out.println("Enter the Value of Array");
+        for(int i=0; i<N; i++){
+            arr[i]=input.nextInt();
+          }
+          int sumofPos=0;
+          int sumofNeg=0;
+          int sumofZero=0;
+          for(int j=0; j<N; j++){
+            if(arr[j]>0){
+              sumofPos=sumofPos+arr[j];
+            }
+            else if(arr[j]<0){
+              sumofNeg=sumofNeg+arr[j];
+              sumofNeg*=(-1);
+            }
+            else if(arr[j]==0){
+              sumofZero=sumofZero+arr[j];
+            }
+          }
+           float posRatio=(float)sumofPos/N;
+           float negRatio=(float)sumofNeg/N;
+           float zeroRatio=(float)sumofZero/N;
+           
+           System.out.printf("%.6f",posRatio);
+           System.out.println("");
+           System.out.printf("%.6f",negRatio);
+           System.out.println("");
+           System.out.printf("%.6f",zeroRatio);
+          input.close();
+    }
+}
