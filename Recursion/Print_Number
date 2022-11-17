@@ -1,0 +1,23 @@
+#WAP to print a Number with the help of Recursion
+
+package Recursion;
+import java.util.Scanner;
+class PrintNum {
+    public static void print(int n, int N){
+        if(n==N+1){
+          return;
+        }
+        else{
+          System.out.print(n+" ");
+          print(n+1, N);
+        }
+    }
+    public static void main(String[] args) {
+      System.out.println("WAP to Print Number upto N with help of Recursion");
+      Scanner input = new Scanner(System.in);
+      System.out.println("Enter the Number upto which you want to print Number");
+      int N=input.nextInt();
+        int n=1;
+        print(n, N);
+    }
+}
