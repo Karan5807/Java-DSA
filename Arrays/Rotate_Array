@@ -1,0 +1,37 @@
+#WAP to Rotate Array upto N^th Term.
+
+import java.util.Scanner;
+public class RotateArray {
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        System.out.println("Program No 18 of 100 Days");
+        System.out.println("Rotate an array From N^th Term");
+        int A[]={9,8,7,6,5,4,3,2,1};
+        int len=A.length;
+        ////// Printing Array ////
+        for(int i=0; i<len; i++){
+            System.out.print(A[i]+" ");
+        }
+        System.out.println("");
+        System.out.println("Enter the N^th Term to Rotate the Array");
+        int N= input.nextInt();  ////// Taking Input for the Nth Term to Rotate the Array ///
+        if(N>len){
+            System.out.println("Invalid N^th Term");
+        }
+        else{
+        int B[]=new int[len];  //// Creating New Array for store in the Manipulated Array  ////
+        ///// Logic for the Manipulation of Array  ////
+        
+        for(int i=len-N; i<=len-1; i++){
+            B[i-(len-N)]=A[i];
+        }
+        for(int i=0; i<len-N; i++){
+            B[N+i]=A[i];
+        }
+        for(int i=0; i<len; i++){  ////Printing Alterred Array ///
+            System.out.print(B[i]+" ");
+        }
+    }
+    input.close();        
+    }
+}
